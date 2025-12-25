@@ -32,15 +32,27 @@ function GameResultTable({ results }: GameResultTableProps) {
         <TableBody>
           {results.map(({ id, result, dateTime, guess, guessVariant }) => (
             <TableRow key={id}>
-              <TableCell>
+              <TableCell
+                sx={{
+                  paddingBlock: "4px"
+                }}
+              >
                 <Typography variant="body2">{getTimeFromDate(new Date(dateTime))}</Typography>
               </TableCell>
-              <TableCell>
+              <TableCell
+                sx={{
+                  paddingBlock: "4px"
+                }}
+              >
                 <Typography variant="body2">
                   {guessVariant === "over" ? "Over" : "Under"} {"  "} {guess}
                 </Typography>
               </TableCell>
-              <TableCell>
+              <TableCell
+                sx={{
+                  paddingBlock: "4px"
+                }}
+              >
                 <Typography variant="body2" color={guess > result ? "success" : "error"}>
                   {result}
                 </Typography>

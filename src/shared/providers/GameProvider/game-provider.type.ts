@@ -4,8 +4,8 @@ export type GameContextType = {
   results: GameResultType[];
   limitResult: number;
   notification: GameNotificaitonProps | null;
-  runGame: (variant: GuessVariantType, guessValue: number) => void;
-  closeNotification: () => void;
+  runGame?: (variant: GuessVariantType, guessValue: number) => void;
+  closeNotification?: () => void;
 };
 
 export type GameNotificaitonProps = {

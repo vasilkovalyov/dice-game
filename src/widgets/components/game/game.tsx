@@ -19,7 +19,9 @@ function Game() {
   const [guessValue, setGuessValue] = useState<number>(0);
 
   function onHandleSubmit() {
-    runGame(selectedVariant, guessValue);
+    if (runGame) {
+      runGame(selectedVariant, guessValue);
+    }
   }
 
   return (

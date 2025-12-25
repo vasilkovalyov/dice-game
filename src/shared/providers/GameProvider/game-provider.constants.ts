@@ -19,7 +19,5 @@ export const initialState: GameContextType = {
     variant: "success",
     title: NOTIFICATION_SUCCESS_TITLE,
     text: null
-  },
-  runGame: () => {},
-  closeNotification: () => {}
+  }
 };

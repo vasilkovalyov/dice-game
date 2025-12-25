@@ -1,12 +1,14 @@
 import { FC, ReactElement } from "react";
 
-import { Box, Container } from "@mui/material";
+import Game from "@/widgets/components/game/game";
+
+import { GameProvider } from "@/src/shared/providers/GameProvider/game-provider";
 
 const DicePageContainer: FC = (): ReactElement => {
   return (
-    <Box component="section">
-      <Container>1</Container>
-    </Box>
+    <GameProvider>
+      <Game />
+    </GameProvider>
   );
 };
 

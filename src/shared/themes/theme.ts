@@ -29,6 +29,9 @@ function getTheme(): Theme {
       success: {
         main: "#1B5E20",
         "100": "#2E7D32"
+      },
+      grey: {
+        "100": "rgba(0, 0, 0, 0.04)"
       }
     },
     typography: {
@@ -68,6 +71,39 @@ function getTheme(): Theme {
           [defaultTheme.breakpoints.up("lg")]: {
             maxWidth: CONTAINER_WIDTH,
             paddingInline: CONTAINER_INLINE_SPACE
+          }
+        }
+      }
+    },
+    MuiButtonBase: {
+      styleOverrides: {
+        root: {
+          borderRadius: "4px",
+          height: "42px",
+          fontSize: "15px",
+          fontWeight: 500
+        }
+      }
+    },
+    MuiAlert: {
+      styleOverrides: {
+        colorSuccess: {
+          color: "#ffffff",
+          backgroundColor: "#2E7D32"
+        },
+        colorError: {
+          color: "#ffffff",
+          backgroundColor: "#D32F2F"
+        }
+      }
+    },
+    MuiSlider: {
+      styleOverrides: {
+        mark: {
+          ":root": {
+            width: "2px",
+            height: "2px",
+            backgroundColor: "#9C27B0"
           }
         }
       }
